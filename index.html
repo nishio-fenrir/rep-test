@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name='robots' content='noindex,nofollow' />
+<title>FENRIR-test</title>
+
+<link href="main.css" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css">
+body {
+	margin: 0px;
+	background: url(img/back.jpg) center center / cover no-repeat fixed;
+}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/animate.css">
+<script src="dist/wow.min.js"></script>
+    
+    <script>
+	    new WOW().init();
+	</script>
+	
+	    <script type="text/javascript">
+
+        
+        //**************************************************************************
+            
+            //★ユーザー用の設定項目
+            
+            //★動画プレーヤーの横幅と縦幅を設定する（ピクセル数）。
+                            
+                            //横幅
+                            var videoWidth = 1350;
+                            
+                            //縦幅
+                            var videoHeight = 775;
+                            
+            //★表示させるYouTube動画の「動画ID」を設定する。
+                            var youtubeVideoID = "m4KSmQFq4Ms";
+                            
+            //★リダイレクトさせる移動先のページのURLを設定する。
+                            var redirectUrl = "hall-op.html";
+        
+            //★リダイレクト先のページを新しいウィンドウ（新しいタブ）で開くか、
+            //  同じページ内で開くかを設定する
+                            //新しいウィンドウ（新しいタブ）で開く「1」 / 同じページ内で開く「0」
+                            var redirectTargetBlank = 0;
+            
+        //**************************************************************************
+    </script>
+	
+</head>
+
+<body>
+<header>
+  <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+	      <ul class="menu">
+		      <li><hr></hr></li>
+		      <li><a href="top.html"><b>RCJ Next Land全体マップを見る</b></a></li>
+		      <li><hr></hr></li>
+		      <li><a href="map.html"><b>-序- Introduction全体マップを見る</b></a></li>
+		      <li><a href="hall.html">▶︎RCJスタジアムへ行く</a></li>
+		      <li><a href="factory/factory.html">▶︎フキューラ ファクトリーへ行く</a></li>
+		      <li><a href="church/church.html">▶︎チーズン テラスへ行く</a></li>
+		      <li><hr></hr></li>
+		      <li><a href="map-pt2.html"><b>-破- Development全体マップを見る</b></a></li>
+		      <li><a href="cave/cave.html">▶︎じゃぼんっの滝うら洞窟へ行く</a></li>
+		      <li><a href="river/river.html">▶︎じゃぼんっの滝つぼへ行く</a></li>
+		      <li><a href="map-pt2.html">▶︎サムとジョンの像へ行く</a></li>
+		      <li><hr></hr></li>
+		      <li style="line-height: 1.8em;margin: 18px 0 0;"><a href="map-pt3.html"><b>-30周年、その先へ- 30tn Anniversary,and onward全体マップを見る</b></a></li>
+		      <li><a href="map-pt3.html">▶︎ネクストランド タウンへ行く</a></li>
+		      <li><a href="https://rcj-30th.com/post">▶︎カーヴ ド RCJ ジャポンへ行く</a></li>
+		      <li><hr></hr></li>
+	      </ul>
+      </div>
+  </div>
+</header>
+
+
+
+	<div id="wrapper0" align="center">
+		
+		<div id="book">	
+			
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="iframe_player_api"></div><a href="hall-op.html">>>SKIP</a>
+
+		</div>
+		
+	</div>
+	
+	<div id="foot">COPYRIGHT © 2021 ROYAL CANIN JAPON, Inc.</div>
+</body>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('iframe_player_api', {
+          width: videoWidth,
+          height: videoHeight,
+          videoId: youtubeVideoID,
+          
+          
+                        playerVars: {
+                                //左の値は「パラメータの名前」。
+                                //右の値は「パラメータの値」。
+                                'modestbranding': 1,
+                                'autohide': 1,
+                                'controls': 1,
+                                'showinfo': 0,
+                                'rel': 0,
+								'autoplay': 1,
+								'mute': 0
+                                
+                        },
+          
+          
+          
+          
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+        function onPlayerStateChange(event){
+                    
+                    switch(event.data){
+                         case YT.PlayerState.ENDED:
+                                    
+                                    if( redirectTargetBlank ){
+                                        var redirectATag = document.createElement('a');
+                                        redirectATag.href = redirectUrl;
+                                        redirectATag.target = '_blank';
+                                        document.body.appendChild(redirectATag);
+                                        redirectATag.click();
+                                    }else{
+                                        location.href = redirectUrl;
+                                    }
+                                    
+                                break;
+                         case YT.PlayerState.PLAYING:
+                                break;
+                         case YT.PlayerState.PAUSED:
+                                break;
+                         case YT.PlayerState.BUFFERING:
+                                break;
+                         case YT.PlayerState.CUED:
+                                break;
+                    }
+        }
+    </script>
+</html>
